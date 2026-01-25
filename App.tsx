@@ -6,20 +6,20 @@ import { Vision } from './pages/Vision';
 import { Technology } from './pages/Technology';
 import { Ethics } from './pages/Ethics';
 import { Careers } from './pages/Careers';
-import { Lab } from './pages/Lab';
+import { Careers } from './pages/Careers';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
-  
+
   // Refined image selection for better cohesion (Warm Tech + High End)
   // 1. Story: Clean, modern workspace with warm lighting.
   // 2. Philosophy: Abstract light/sand concept for "Time".
   // 3. Simplicity: Minimalist device interaction.
   // 4. Warmth: Authentic human connection.
   const [images] = useState({
-    story: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1600&auto=format&fit=crop", 
-    philosophy: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=1600&auto=format&fit=crop", 
-    simplicity: "https://images.unsplash.com/photo-1512428559087-560fa5ceab42?q=80&w=1600&auto=format&fit=crop", 
+    story: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1600&auto=format&fit=crop",
+    philosophy: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=1600&auto=format&fit=crop",
+    simplicity: "https://images.unsplash.com/photo-1512428559087-560fa5ceab42?q=80&w=1600&auto=format&fit=crop",
     warmth: "https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=1600&auto=format&fit=crop"
   });
 
@@ -33,8 +33,7 @@ function App() {
         return <Ethics />;
       case 'careers':
         return <Careers />;
-      case 'lab':
-        return <Lab />;
+
       case 'home':
       default:
         return <Home images={images} onNavigate={setCurrentPage} />;
