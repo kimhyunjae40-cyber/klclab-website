@@ -6,6 +6,7 @@ import { Vision } from './pages/Vision';
 import { Technology } from './pages/Technology';
 import { Ethics } from './pages/Ethics';
 import { Careers } from './pages/Careers';
+import { Lab } from './pages/Lab';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -32,6 +33,8 @@ function App() {
         return <Ethics />;
       case 'careers':
         return <Careers />;
+      case 'lab':
+        return <Lab />;
       case 'home':
       default:
         return <Home images={images} onNavigate={setCurrentPage} />;
