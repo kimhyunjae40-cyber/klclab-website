@@ -13,12 +13,11 @@
         font-family: 'Manrope', 'Noto Sans KR', sans-serif;
         background-color: #FDFCF8;
         color: #1c1917;
-        word-break: keep-all; /* Improve Korean line breaking */
+        word-break: keep-all;
       }
       .font-display {
         font-family: 'Inter', 'Noto Sans KR', sans-serif;
       }
-      /* Custom scrollbar for a premium feel */
       ::-webkit-scrollbar {
         width: 8px;
       }
@@ -32,14 +31,11 @@
       ::-webkit-scrollbar-thumb:hover {
         background: #A8A29E;
       }
-
-      /* Infinite Marquee Animation */
       .animate-marquee {
         display: flex;
         width: max-content;
         animation: marquee 30s linear infinite;
       }
-      
       @keyframes marquee {
         0% { transform: translateX(0); }
         100% { transform: translateX(-50%); }
