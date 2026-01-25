@@ -6,7 +6,6 @@ import { Vision } from './pages/Vision';
 import { Technology } from './pages/Technology';
 import { Ethics } from './pages/Ethics';
 import { Careers } from './pages/Careers';
-import { Careers } from './pages/Careers';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
