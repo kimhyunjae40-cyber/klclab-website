@@ -31,9 +31,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 안개는 낮게 깔리고, 꿈은 높이 솟아오릅니다.<br />
                 KLCLAB은 인류 미래의 밤을 지키고 있습니다.
               </p>
-              <address className="not-italic text-stone-400 text-xs leading-relaxed">
-                경기도 용인시 수지구 광교중앙로 338 광교우미뉴브 A동 5층
-              </address>
             </div>
 
             <div className="flex gap-12 text-sm font-medium text-stone-600">
