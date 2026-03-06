@@ -1,7 +1,39 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Check, Info } from 'lucide-react';
+import { loadTossPayments, ANONYMOUS } from '@tosspayments/tosspayments-sdk';
+
+const clientKey = 'test_ck_LkKEypNArW9lQX5QyEXX3lmeaxYG';
 
 export const Pricing = () => {
+    const handlePaymentRequest = async () => {
+        try {
+            // ------ v2 SDK 초기화 및 결제창 호출 ------
+            const tossPayments = await loadTossPayments(clientKey);
+
+            // v2에서는 .payment()를 통해 결제 객체를 생성해야 합니다.
+            const payment = tossPayments.payment({ customerKey: ANONYMOUS });
+
+            await payment.requestPayment({
+                method: 'CARD', // 필수: 결제 수단
+                amount: {
+                    currency: 'KRW',
+                    value: 99000,
+                },
+                orderId: `order_${Math.random().toString(36).substring(2, 10)}`,
+                orderName: "Aura API Pro 구독",
+                successUrl: `${window.location.origin}?page=success`,
+                failUrl: `${window.location.origin}?page=fail`,
+                customerEmail: "customer123@klclab.com",
+                customerName: "테스트고객",
+            });
+        } catch (error: any) {
+            console.error("Payment request failed:", error);
+            if (error.code === 'USER_CANCEL') {
+                // 사용자가 결제창을 닫은 경우
+            }
+        }
+    };
+
     return (
         <div className="pt-32 pb-24 min-h-screen bg-[#FDFCF8]">
             <div className="container mx-auto px-6 max-w-6xl">
@@ -17,7 +49,7 @@ export const Pricing = () => {
                     </p>
                 </div>
 
-                <div className="max-w-lg mx-auto">
+                <div className="max-w-2xl mx-auto flex flex-col gap-8">
                     {/* Main Pricing Card */}
                     <div className="bg-white rounded-3xl p-8 shadow-xl border border-stone-100 relative overflow-hidden animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
                         <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-orange-400 to-amber-500"></div>
@@ -29,21 +61,12 @@ export const Pricing = () => {
                             </div>
                         </div>
 
-                        <div className="mb-8 flex items-baseline gap-2">
+                        <div className="mb-8 flex items-baseline gap-2 border-b border-stone-100 pb-8">
                             <span className="text-5xl font-black font-display text-stone-900">₩99,000</span>
                             <span className="text-stone-500 font-medium font-display">/ 월 (VAT 포함)</span>
                         </div>
 
-                        <a href="#payment-test" className="block w-full text-center py-4 bg-stone-900 text-white rounded-2xl font-bold hover:bg-stone-800 transition-colors mb-4">
-                            구독 시작하기
-                        </a>
-
-                        <div className="flex items-center justify-center gap-1 text-xs text-stone-400 mb-8">
-                            <Info size={14} />
-                            <span>결제 시 하단의 이용약관 및 환불 정책에 동의하게 됩니다.</span>
-                        </div>
-
-                        <div className="space-y-4">
+                        <div className="space-y-4 mb-4">
                             <p className="font-bold text-sm text-stone-900 mb-4">플랜 포함 사항:</p>
                             {[
                                 'API 호출 무제한 (공정 사용 정책 적용)',
@@ -62,8 +85,25 @@ export const Pricing = () => {
                         </div>
                     </div>
 
+                    {/* Standard TossPayments Button Container */}
+                    <div className="bg-white rounded-3xl p-8 shadow-xl border border-stone-100 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+                        <h4 className="text-xl font-bold text-stone-900 mb-6">결제 진행 (API 개별 연동 테스트)</h4>
+
+                        <button
+                            onClick={handlePaymentRequest}
+                            className="block w-full text-center py-4 bg-blue-600 text-white rounded-2xl font-bold hover:bg-blue-700 transition-colors mb-4 shadow-lg shadow-blue-600/20"
+                        >
+                            카드 결제하기
+                        </button>
+
+                        <div className="flex items-center justify-center gap-1 text-xs text-stone-400">
+                            <Info size={14} />
+                            <span>표준 결제창을 통한 테스트 결제입니다. 실제 청구되지 않습니다.</span>
+                        </div>
+                    </div>
+
                     {/* Policy Notice Box */}
-                    <div className="mt-8 bg-stone-50 rounded-2xl p-6 border border-stone-200 text-xs text-stone-500 leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+                    <div className="bg-stone-50 rounded-2xl p-6 border border-stone-200 text-xs text-stone-500 leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
                         <h4 className="font-bold text-stone-900 mb-2 text-sm">결제 및 환불 안내</h4>
                         <ul className="list-disc pl-4 space-y-1">
                             <li>본 상품은 디지털/비실물 콘텐츠(API 서비스) 구독형 상품입니다.</li>

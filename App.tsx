@@ -7,6 +7,8 @@ import { Technology } from './pages/Technology';
 import { Ethics } from './pages/Ethics';
 import { Careers } from './pages/Careers';
 import { Pricing } from './pages/Pricing';
+import { PaymentSuccess } from './pages/PaymentSuccess';
+import { PaymentFail } from './pages/PaymentFail';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -35,6 +37,10 @@ function App() {
         return <Ethics />;
       case 'careers':
         return <Careers />;
+      case 'success':
+        return <PaymentSuccess onNavigate={setCurrentPage} />;
+      case 'fail':
+        return <PaymentFail onNavigate={setCurrentPage} />;
 
       case 'home':
       default:
