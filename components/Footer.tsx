@@ -1,6 +1,6 @@
+import React, { useState } from 'react';
 import { X } from 'lucide-react';
 import { POLICY_CONTENT, COMPANY_INFO } from '../constants';
-import { Logo } from './Logo';
 import { Logo } from './Logo';
 
 interface FooterProps {
