@@ -6,6 +6,7 @@ import { Vision } from './pages/Vision';
 import { Technology } from './pages/Technology';
 import { Ethics } from './pages/Ethics';
 import { Careers } from './pages/Careers';
+import { Pricing } from './pages/Pricing';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -28,6 +29,8 @@ function App() {
         return <Vision />;
       case 'technology':
         return <Technology />;
+      case 'pricing':
+        return <Pricing />;
       case 'ethics':
         return <Ethics />;
       case 'careers':
