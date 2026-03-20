@@ -29,7 +29,7 @@ export const FAQ_DATA: FaqItem[] = [
 
 export const COMPANY_INFO = {
   name: '(주)KLCLAB(케이엘씨랩)',
-  ceo: '김현재', // 대표자명 (여전히 통신판매업 등 추가 확인 필요시 임의로 남겨둠)
+  ceo: '김호인', // 대표자명 (여전히 통신판매업 등 추가 확인 필요시 임의로 남겨둠)
   businessNumber: '109-88-03559',
   ecommerceNumber: '제2025-경기용인-1063호', // (일단 임시로 기입, 정식 번호 발급 시 수정 필요)
   address: '경기도 용인시 수지구 광교중앙로 338, 에이동 512호',
