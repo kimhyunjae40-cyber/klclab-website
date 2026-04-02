@@ -3,7 +3,9 @@ import { NavLink, FaqItem } from './types';
 export const NAV_LINKS: NavLink[] = [
   { label: '비전', href: '#vision' },
   { label: '기술', href: '#technology' },
+  { label: '성과', href: '#achievements' },
   { label: '요금', href: '#pricing' },
+  { label: '제휴', href: '#contact' },
   { label: '윤리', href: '#ethics' },
   { label: '채용', href: '#careers' },
 ];

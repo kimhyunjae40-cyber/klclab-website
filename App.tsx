@@ -9,6 +9,8 @@ import { Careers } from './pages/Careers';
 import { Pricing } from './pages/Pricing';
 import { PaymentSuccess } from './pages/PaymentSuccess';
 import { PaymentFail } from './pages/PaymentFail';
+import { Achievements } from './pages/Achievements';
+import { Contact } from './pages/Contact';
 
 function App() {
   const queryParams = new URLSearchParams(window.location.search);
@@ -39,6 +41,10 @@ function App() {
         return <Ethics />;
       case 'careers':
         return <Careers />;
+      case 'achievements':
+        return <Achievements />;
+      case 'contact':
+        return <Contact />;
       case 'success':
         return <PaymentSuccess onNavigate={setCurrentPage} />;
       case 'fail':
