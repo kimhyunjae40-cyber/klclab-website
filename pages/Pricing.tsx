@@ -21,7 +21,7 @@ export const Pricing = () => {
                     method: 'CARD' as const,
                     amount: { currency: 'KRW' as const, value: 50000 },
                     orderId: `one_${Math.random().toString(36).substring(2, 10)}`,
-                    orderName: "Aura One-time 50k Credits",
+                    orderName: "Aura 단품 이용권 (500회)",
                 };
 
             await payment.requestPayment({
@@ -81,15 +81,15 @@ export const Pricing = () => {
                     <div className="bg-white rounded-3xl p-8 shadow-xl border border-stone-100 relative overflow-hidden flex flex-col h-full">
                         <div className="mb-6">
                             <span className="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-xs font-bold uppercase tracking-wider">Single Item</span>
-                            <h3 className="text-2xl font-bold text-stone-900 mt-4 mb-2">Aura One-time Credit</h3>
-                            <p className="text-stone-500 text-sm">필요한 만큼만 충전해서 사용하는 단품 크레딧 상품</p>
+                            <h3 className="text-2xl font-bold text-stone-900 mt-4 mb-2">Aura One-time Pass</h3>
+                            <p className="text-stone-500 text-sm">필요할 때마다 구매해서 사용하는 단품 이용권</p>
                         </div>
                         <div className="mb-8 flex items-baseline gap-2">
                             <span className="text-4xl font-black text-stone-900">₩50,000</span>
-                            <span className="text-stone-500 font-medium">/ 50k Credits</span>
+                            <span className="text-stone-500 font-medium">/ 500회 호출권</span>
                         </div>
                         <div className="space-y-4 mb-10 flex-grow">
-                            {['유효기간 1년', '모든 Persona 이용 가능', '잔여 크레딧 대시보드', '부족 시 즉시 충전 가능'].map((f, i) => (
+                            {['유효기간 1년', '모든 Persona 이용 가능', '잔여 호출수 대시보드', '부족 시 즉시 추가 구매 가능'].map((f, i) => (
                                 <div key={i} className="flex gap-3 items-center">
                                     <Check className="w-4 h-4 text-blue-600" />
                                     <span className="text-stone-600 text-sm">{f}</span>
@@ -100,7 +100,7 @@ export const Pricing = () => {
                             onClick={() => handlePaymentRequest('single')}
                             className="w-full py-4 bg-blue-600 text-white rounded-2xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20"
                         >
-                            단품 크레딧 구매하기
+                            단품 이용권 구매하기
                         </button>
                     </div>
                 </div>
