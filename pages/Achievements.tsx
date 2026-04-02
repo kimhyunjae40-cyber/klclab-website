@@ -10,6 +10,7 @@ export const Achievements = () => {
           <Sparkles className="w-4 h-4 text-orange-500" />
           <span className="text-sm font-bold text-stone-600 tracking-wide">MILESTONES & IMPACT</span>
         </div>
+        <img src="/logos/klclab-developer-header.png" alt="KLCLAB Developer Header" className="mx-auto h-20 md:h-28 mb-8 object-contain animate-fade-in-up shadow-sm rounded-xl" />
         <h1 className="text-5xl md:text-7xl font-black text-stone-900 mb-8 tracking-tight leading-tight animate-fade-in-up" style={{ animationDelay: '100ms' }}>
           숫자로 증명하는<br className="hidden md:block"/> KLCLAB의 혁신
         </h1>
@@ -134,24 +135,53 @@ export const Achievements = () => {
 
         <div className="grid md:grid-cols-2 gap-12">
           {/* Internal Services */}
-          <div className="bg-stone-50 rounded-3xl p-10 border border-stone-200">
+          <div className="bg-stone-50 rounded-3xl p-10 border border-stone-200 flex flex-col">
             <h3 className="text-2xl font-bold text-stone-900 mb-8 flex items-center gap-3">
               <Sparkles className="w-6 h-6 text-orange-500" />
               자체 프로덕트 개발
             </h3>
-            <div className="space-y-6">
-              {[
-                { name: '자체 앱 서비스명 (예정)', desc: '추후 개발/마일스톤에 오를 서비스에 대한 간단한 소개 부분입니다', status: '개발 중' },
-                { name: 'KLCLAB B2B API 솔루션', desc: '기업 파트너사를 위해 제공되는 맞춤형 AI 인프라 연동 환경', status: '상용화 준비' },
-              ].map((item, idx) => (
-                <div key={idx} className="bg-white rounded-2xl p-6 shadow-sm border border-stone-100 transition-transform hover:-translate-y-1">
-                  <div className="flex justify-between items-start mb-2">
-                    <h4 className="text-lg font-bold text-stone-900">{item.name}</h4>
-                    <span className="px-3 py-1 bg-orange-100 text-orange-600 rounded-full text-xs font-bold">{item.status}</span>
+            <div className="space-y-6 flex-1">
+              {/* Highlighted Launch: Grove4 */}
+              <div className="bg-white rounded-3xl overflow-hidden shadow-md border border-stone-100 transition-transform hover:-translate-y-1 group flex flex-col pt-1">
+                <div className="bg-stone-900 relative p-6 pb-24 overflow-hidden rounded-t-3xl">
+                  <div className="absolute inset-0 bg-gradient-to-br from-stone-800 via-stone-900 to-black opacity-90"></div>
+                  <div className="relative z-10">
+                    <div className="flex justify-between items-start mb-2">
+                      <div>
+                        <h4 className="text-3xl font-black text-white drop-shadow-sm mb-1 tracking-tight">Grove4</h4>
+                        <p className="text-sm font-medium text-stone-300 tracking-wide">차세대 진로적성 분석 솔루션</p>
+                      </div>
+                      <span className="px-3 py-1 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded-full text-xs font-black shadow-md backdrop-blur-sm tracking-wider">
+                        ✨ '26.04 론칭
+                      </span>
+                    </div>
                   </div>
-                  <p className="text-stone-500 text-sm">{item.desc}</p>
+                  {/* Screenshots Showcase */}
+                  <div className="absolute -bottom-6 right-0 left-6 flex gap-3 overflow-x-visible pointer-events-none">
+                    <img src="/images/grove4/01_home.png" alt="Grove4 App Home" className="h-44 w-auto rounded-xl shadow-2xl border-[3px] border-stone-800 object-cover rotate-[-4deg] transition-transform duration-500 group-hover:rotate-0 group-hover:-translate-y-3" />
+                    <img src="/images/grove4/05_reports.png" alt="Grove4 Reports" className="h-44 w-auto rounded-xl shadow-2xl border-[3px] border-stone-800 object-cover translate-y-3 transition-transform duration-500 group-hover:translate-y-0 z-10" />
+                    <img src="/images/grove4/02_assessments.png" alt="Grove4 Assessments" className="h-44 w-auto rounded-xl shadow-2xl border-[3px] border-stone-800 object-cover rotate-[4deg] transition-transform duration-500 group-hover:rotate-0 group-hover:-translate-y-3" />
+                  </div>
                 </div>
-              ))}
+                <div className="p-6 bg-white z-20 pt-8 relative">
+                  <p className="text-stone-600 text-[15px] leading-relaxed mb-5">
+                    KLCLAB의 압도적인 AI 추론 엔진이 반영된 첫 상용화 성과물입니다. 다차원적 분석 모델로 학생들의 진로와 적성을 입체적으로 진단하고, 맞춤형 성장 리포트와 경로를 제시합니다. 
+                  </p>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="text-[11px] font-black uppercase tracking-wider px-3 py-1.5 bg-[#E8F5E9] text-[#2E7D32] rounded-lg">✓ Android 4월 출시 예정</span>
+                    <span className="text-[11px] font-black uppercase tracking-wider px-3 py-1.5 bg-[#FFF3E0] text-[#E65100] rounded-lg">⏳ iOS App Store 심사 중</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Other Products */}
+              <div className="bg-white rounded-2xl p-6 shadow-sm border border-stone-100 transition-transform hover:-translate-y-1">
+                <div className="flex justify-between items-start mb-2">
+                  <h4 className="text-lg font-bold text-stone-900">KLCLAB B2B API 솔루션</h4>
+                  <span className="px-3 py-1 bg-orange-100 text-orange-600 rounded-full text-xs font-bold">상용화 준비</span>
+                </div>
+                <p className="text-stone-500 text-sm">데이터 주권과 보안을 만족하면서도 기업 파트너사가 즉시 도입 가능한 맞춤형 AI 인프라 연동 환경입니다.</p>
+              </div>
             </div>
           </div>
 
