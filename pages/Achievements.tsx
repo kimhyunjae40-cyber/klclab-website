@@ -26,8 +26,8 @@ export const Achievements = () => {
             <div className="w-12 h-12 bg-orange-50 rounded-2xl flex items-center justify-center mb-6">
               <Users className="w-6 h-6 text-orange-500" />
             </div>
-            <div className="text-5xl font-black text-stone-900 mb-2 font-display">1.2M+</div>
-            <div className="text-stone-500 font-medium">누적 활성 사용자 수</div>
+            <div className="text-5xl font-black text-stone-900 mb-2 font-display">15+</div>
+            <div className="text-stone-500 font-medium">초기 베타 파트너 논의</div>
           </div>
           
           {/* Metric 2 */}
@@ -35,8 +35,8 @@ export const Achievements = () => {
             <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
               <Activity className="w-6 h-6 text-blue-500" />
             </div>
-            <div className="text-5xl font-black text-stone-900 mb-2 font-display">99.9%</div>
-            <div className="text-stone-500 font-medium">AI 응답 정확도 및 안정성</div>
+            <div className="text-5xl font-black text-stone-900 mb-2 font-display">0.2s</div>
+            <div className="text-stone-500 font-medium">AI 맞춤 응답 최적화 속도</div>
           </div>
 
           {/* Metric 3 */}
@@ -44,8 +44,8 @@ export const Achievements = () => {
             <div className="w-12 h-12 bg-emerald-50 rounded-2xl flex items-center justify-center mb-6">
               <Globe className="w-6 h-6 text-emerald-500" />
             </div>
-            <div className="text-5xl font-black text-stone-900 mb-2 font-display">45+</div>
-            <div className="text-stone-500 font-medium">글로벌 엔터프라이즈 파트너</div>
+            <div className="text-5xl font-black text-stone-900 mb-2 font-display">5</div>
+            <div className="text-stone-500 font-medium">PoC(기술 검증) 진행 중</div>
           </div>
 
           {/* Metric 4 */}
@@ -53,8 +53,8 @@ export const Achievements = () => {
             <div className="w-12 h-12 bg-purple-50 rounded-2xl flex items-center justify-center mb-6">
               <Award className="w-6 h-6 text-purple-500" />
             </div>
-            <div className="text-5xl font-black text-stone-900 mb-2 font-display">1위</div>
-            <div className="text-stone-500 font-medium">2026 AI 기술 혁신 대상</div>
+            <div className="text-5xl font-black text-stone-900 mb-2 font-display">Ready</div>
+            <div className="text-stone-500 font-medium">Aura B2B 솔루션 출시 임박</div>
           </div>
         </div>
       </div>
@@ -74,13 +74,13 @@ export const Achievements = () => {
                 </span>
               </h2>
               <p className="text-stone-400 text-lg leading-relaxed">
-                출시 이후 매 분기 기록적인 성장을 달성해 왔습니다. 우리의 기술이 더 많은 사용자와 기업의 일상에 녹아들수록 성장의 가속도는 더욱 빨라지고 있습니다. 이곳에 구체적인 연혁이나 성장 스토리를 추가할 수 있습니다.
+                현재 핵심 B2B 파트너들과 함께 기술 검증 및 고도화를 진행하고 있습니다. 본격적인 출시에 앞서 우리의 인프라가 얼마나 견고하게 준비되고 있는지 확인하실 수 있습니다.
               </p>
               
               <div className="space-y-6 pt-4">
                 {[
-                  { year: '2026', title: '시리즈 C 투자 유치 및 글로벌 무대 진출' },
-                  { year: '2025', title: 'Aura API 1.0 공식 런칭 및 B2B 파트너십 구축' },
+                  { year: '2026', title: '비공개 베타 테스트(CBT) 시작' },
+                  { year: '2025', title: '핵심 AI 엔진 아키텍처 구축 완료' },
                   { year: '2024', title: 'Soft Tech 프로토타입 개발 및 법인 설립' },
                 ].map((item, idx) => (
                   <div key={idx} className="flex gap-6 items-start">
@@ -100,7 +100,7 @@ export const Achievements = () => {
               </div>
               <h3 className="text-xl font-bold text-white mb-8 flex items-center gap-2">
                 <TrendingUp className="text-orange-400" />
-                월간 API 호출량 추이
+                API 성능 고도화 추이 (예상치)
               </h3>
               {/* Dummy Chart Visualization */}
               <div className="h-64 flex items-end gap-2 justify-between">
