@@ -124,6 +124,60 @@ export const Achievements = () => {
           </div>
         </div>
       </div>
+
+      {/* Services Portfolio */}
+      <div className="container mx-auto px-6 max-w-6xl py-32">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-black tracking-tight text-stone-900 mb-4">Project & Portfolio</h2>
+          <p className="text-stone-500 text-lg">우리의 기술이 집약된 자체 서비스 라인업과 산업별 파트너십 구축 사례들</p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-12">
+          {/* Internal Services */}
+          <div className="bg-stone-50 rounded-3xl p-10 border border-stone-200">
+            <h3 className="text-2xl font-bold text-stone-900 mb-8 flex items-center gap-3">
+              <Sparkles className="w-6 h-6 text-orange-500" />
+              자체 프로덕트 개발
+            </h3>
+            <div className="space-y-6">
+              {[
+                { name: '자체 앱 서비스명 (예정)', desc: '추후 개발/마일스톤에 오를 서비스에 대한 간단한 소개 부분입니다', status: '개발 중' },
+                { name: 'KLCLAB B2B API 솔루션', desc: '기업 파트너사를 위해 제공되는 맞춤형 AI 인프라 연동 환경', status: '상용화 준비' },
+              ].map((item, idx) => (
+                <div key={idx} className="bg-white rounded-2xl p-6 shadow-sm border border-stone-100 transition-transform hover:-translate-y-1">
+                  <div className="flex justify-between items-start mb-2">
+                    <h4 className="text-lg font-bold text-stone-900">{item.name}</h4>
+                    <span className="px-3 py-1 bg-orange-100 text-orange-600 rounded-full text-xs font-bold">{item.status}</span>
+                  </div>
+                  <p className="text-stone-500 text-sm">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* External Collaborations */}
+          <div className="bg-stone-50 rounded-3xl p-10 border border-stone-200">
+            <h3 className="text-2xl font-bold text-stone-900 mb-8 flex items-center gap-3">
+              <Globe className="w-6 h-6 text-blue-500" />
+              외부 기업 파트너십 및 협업
+            </h3>
+            <div className="space-y-6">
+              {[
+                { name: 'A기업 기술 검증 프로젝트 (예시)', desc: '외부 사명이나 협력 내용을 올리는 공간입니다. 도입 사례 설명', status: 'PoC 진행 중' },
+                { name: 'B플랫폼 업무 협력 모색 (예시)', desc: '앞으로 진행될 외부 파트너와의 비즈니스 확장 및 협약 내용을 기록합니다', status: '협의 중' },
+              ].map((item, idx) => (
+                <div key={idx} className="bg-white rounded-2xl p-6 shadow-sm border border-stone-100 transition-transform hover:-translate-y-1">
+                  <div className="flex justify-between items-start mb-2">
+                    <h4 className="text-lg font-bold text-stone-900">{item.name}</h4>
+                    <span className="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-xs font-bold">{item.status}</span>
+                  </div>
+                  <p className="text-stone-500 text-sm">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
