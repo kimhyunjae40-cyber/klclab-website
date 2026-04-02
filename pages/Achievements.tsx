@@ -158,17 +158,17 @@ export const Achievements = () => {
                   </div>
                   {/* Screenshots Showcase */}
                   <div className="absolute -bottom-6 right-0 left-6 flex gap-3 overflow-x-visible pointer-events-none">
-                    <img src="/images/grove4/01_home.png" alt="Grove4 App Home" className="h-44 w-auto rounded-xl shadow-2xl border-[3px] border-stone-800 object-cover rotate-[-4deg] transition-transform duration-500 group-hover:rotate-0 group-hover:-translate-y-3" />
-                    <img src="/images/grove4/05_reports.png" alt="Grove4 Reports" className="h-44 w-auto rounded-xl shadow-2xl border-[3px] border-stone-800 object-cover translate-y-3 transition-transform duration-500 group-hover:translate-y-0 z-10" />
-                    <img src="/images/grove4/02_assessments.png" alt="Grove4 Assessments" className="h-44 w-auto rounded-xl shadow-2xl border-[3px] border-stone-800 object-cover rotate-[4deg] transition-transform duration-500 group-hover:rotate-0 group-hover:-translate-y-3" />
+                    <img src="/screenshots/01_홈.png" alt="Grove4 App Home" className="h-44 w-auto rounded-xl shadow-2xl border-[3px] border-stone-800 object-cover rotate-[-4deg] transition-transform duration-500 group-hover:rotate-0 group-hover:-translate-y-3" />
+                    <img src="/screenshots/05_리포트.png" alt="Grove4 Reports" className="h-44 w-auto rounded-xl shadow-2xl border-[3px] border-stone-800 object-cover translate-y-3 transition-transform duration-500 group-hover:translate-y-0 z-10" />
+                    <img src="/screenshots/02_검사목록.png" alt="Grove4 Assessments" className="h-44 w-auto rounded-xl shadow-2xl border-[3px] border-stone-800 object-cover rotate-[4deg] transition-transform duration-500 group-hover:rotate-0 group-hover:-translate-y-3" />
                   </div>
                 </div>
                 <div className="p-6 bg-white z-20 pt-8 relative">
                   <p className="text-stone-600 text-[15px] leading-relaxed mb-5">
-                    KLCLAB의 압도적인 AI 추론 엔진이 반영된 첫 상용화 성과물입니다. 다차원적 분석 모델로 학생들의 진로와 적성을 입체적으로 진단하고, 맞춤형 성장 리포트와 경로를 제시합니다. 
+                    KLCLAB의 독자적인 AI 엔진 'Aura'가 최초로 상용화된 진로 설계 솔루션입니다. 4가지 핵심 차원(Vision, Mindset, Ability, Harmony)을 분석하여 개인별 최적의 성장을 지원합니다.
                   </p>
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="text-[11px] font-black uppercase tracking-wider px-3 py-1.5 bg-[#E8F5E9] text-[#2E7D32] rounded-lg">✓ Android 4월 출시 예정</span>
+                    <span className="text-[11px] font-black uppercase tracking-wider px-3 py-1.5 bg-[#E8F5E9] text-[#2E7D32] rounded-lg">✓ Android Google Play 4월 출시</span>
                     <span className="text-[11px] font-black uppercase tracking-wider px-3 py-1.5 bg-[#FFF3E0] text-[#E65100] rounded-lg">⏳ iOS App Store 심사 중</span>
                   </div>
                 </div>
