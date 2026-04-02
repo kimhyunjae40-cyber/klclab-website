@@ -143,21 +143,21 @@ export const Achievements = () => {
             <div className="space-y-6 flex-1">
               {/* Highlighted Launch: Grove4 */}
               <div className="bg-white rounded-3xl overflow-hidden shadow-md border border-stone-100 transition-transform hover:-translate-y-1 group flex flex-col pt-1">
-                <div className="bg-stone-900 relative p-6 pb-24 overflow-hidden rounded-t-3xl">
-                  <div className="absolute inset-0 bg-gradient-to-br from-stone-800 via-stone-900 to-black opacity-90"></div>
-                  <div className="relative z-10">
+                  <div className="relative z-20">
                     <div className="flex justify-between items-start mb-2">
                       <div>
-                        <h4 className="text-3xl font-black text-white drop-shadow-sm mb-1 tracking-tight">Grove4</h4>
-                        <p className="text-sm font-medium text-stone-300 tracking-wide">차세대 진로적성 분석 솔루션</p>
+                        <h4 className="text-3xl font-black text-white drop-shadow-lg mb-1 tracking-tight">Grove4</h4>
+                        <p className="text-sm font-bold text-orange-400 tracking-wide drop-shadow-md">차세대 심리검사 솔루션</p>
                       </div>
-                      <span className="px-3 py-1 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded-full text-xs font-black shadow-md backdrop-blur-sm tracking-wider">
+                      <span className="px-3 py-1.5 bg-emerald-500 text-white rounded-full text-[10px] font-black shadow-lg tracking-wider">
                         ✨ '26.04 론칭
                       </span>
                     </div>
                   </div>
+                  <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/30 to-transparent z-10"></div>
+                  
                   {/* Screenshots Showcase */}
-                  <div className="absolute -bottom-6 right-0 left-6 flex gap-3 overflow-x-visible pointer-events-none">
+                  <div className="absolute -bottom-6 right-0 left-6 flex gap-3 overflow-x-visible pointer-events-none z-0">
                     <img src="/screenshots/01_홈.png" alt="Grove4 App Home" className="h-44 w-auto rounded-xl shadow-2xl border-[3px] border-stone-800 object-cover rotate-[-4deg] transition-transform duration-500 group-hover:rotate-0 group-hover:-translate-y-3" />
                     <img src="/screenshots/05_리포트.png" alt="Grove4 Reports" className="h-44 w-auto rounded-xl shadow-2xl border-[3px] border-stone-800 object-cover translate-y-3 transition-transform duration-500 group-hover:translate-y-0 z-10" />
                     <img src="/screenshots/02_검사목록.png" alt="Grove4 Assessments" className="h-44 w-auto rounded-xl shadow-2xl border-[3px] border-stone-800 object-cover rotate-[4deg] transition-transform duration-500 group-hover:rotate-0 group-hover:-translate-y-3" />
