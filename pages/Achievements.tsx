@@ -165,8 +165,17 @@ export const Achievements = () => {
                 </div>
                 <div className="p-6 bg-white z-20 pt-8 relative">
                   <p className="text-stone-600 text-[15px] leading-relaxed mb-5">
-                    KLCLAB의 독자적인 AI 엔진 'Aura'가 최초로 상용화된 진로 설계 솔루션입니다. 4가지 핵심 차원(Vision, Mindset, Ability, Harmony)을 분석하여 개인별 최적의 성장을 지원합니다.
+                    KLCLAB의 독자적인 AI 엔진 'Aura'와 실시간 감정 맥락 파악 기술인 <b>'공감 엔진(Empathy Engine)'</b>이 최초로 상용화된 솔루션입니다. 4가지 핵심 차원을 분석하여 학생별 최적의 성장 경로를 제시합니다.
                   </p>
+                  <div className="bg-orange-50 rounded-2xl p-4 mb-5 border border-orange-100/50">
+                    <div className="flex items-center gap-2 mb-1">
+                      <Zap className="w-4 h-4 text-orange-500" />
+                      <span className="text-xs font-black text-orange-600 uppercase tracking-wider">Next Version (V2) Roadmap</span>
+                    </div>
+                    <p className="text-stone-600 text-[13px] font-medium leading-normal">
+                      V2 업데이트를 통해 <b>학기별 맞춤형 AI 교육 튜터</b>가 탑재됩니다. 공감 엔진이 학생의 학습 태도와 심리를 분석하여 최적의 학습 가이드를 제공할 예정입니다.
+                    </p>
+                  </div>
                   <div className="flex flex-wrap items-center gap-2">
                     <span className="text-[11px] font-black uppercase tracking-wider px-3 py-1.5 bg-[#E8F5E9] text-[#2E7D32] rounded-lg">✓ Android Google Play 4월 출시</span>
                     <span className="text-[11px] font-black uppercase tracking-wider px-3 py-1.5 bg-[#FFF3E0] text-[#E65100] rounded-lg">⏳ iOS App Store 심사 중</span>
