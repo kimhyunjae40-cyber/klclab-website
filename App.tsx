@@ -11,7 +11,9 @@ import { PaymentSuccess } from './pages/PaymentSuccess';
 import { PaymentFail } from './pages/PaymentFail';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('home');
+  const queryParams = new URLSearchParams(window.location.search);
+  const initialPage = queryParams.get('page') || 'home';
+  const [currentPage, setCurrentPage] = useState(initialPage);
 
   // Refined image selection for better cohesion (Warm Tech + High End)
   // 1. Story: Clean, modern workspace with warm lighting.
